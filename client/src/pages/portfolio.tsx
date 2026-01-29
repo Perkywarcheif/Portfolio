@@ -558,104 +558,42 @@ export default function Portfolio() {
             </div>
 
             <div className="relative" data-reveal>
-              <div className="glass grain rounded-3xl p-4">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="text-sm font-semibold" data-testid="text-tools-title">
-                      Build this from your PDF
-                    </div>
-                    <div
-                      className="text-xs text-muted-foreground"
-                      data-testid="text-tools-subtitle"
-                    >
-                      Upload your LinkedIn PDF + 2–3 photos
-                    </div>
-                  </div>
-                  <div className="rounded-full bg-white/5 px-3 py-1 text-xs text-muted-foreground ring-1 ring-white/10">
-                    Prototype
-                  </div>
-                </div>
-
-                <div className="mt-4 grid gap-3">
-                  <div className="rounded-2xl border border-white/10 bg-white/5 p-3">
-                    <label
-                      className="text-xs font-medium text-muted-foreground"
-                      htmlFor="pdf"
-                      data-testid="label-pdf"
-                    >
-                      LinkedIn PDF
-                    </label>
-                    <input
-                      id="pdf"
-                      type="file"
-                      accept="application/pdf"
-                      className="mt-2 block w-full text-sm file:mr-4 file:rounded-xl file:border-0 file:bg-white/10 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-foreground hover:file:bg-white/15"
-                      onChange={(e) => void onParsePdf(e.target.files?.[0] ?? null)}
-                      data-testid="input-pdf"
-                    />
-                    {pdfName ? (
-                      <div className="mt-2 text-xs text-muted-foreground" data-testid="text-pdf-name">
-                        Selected: {pdfName}
-                      </div>
-                    ) : null}
-                  </div>
-
-                  <div className="rounded-2xl border border-white/10 bg-white/5 p-3">
-                    <label
-                      className="text-xs font-medium text-muted-foreground"
-                      htmlFor="photos"
-                      data-testid="label-photos"
-                    >
-                      Your photos (2–3)
-                    </label>
-                    <input
-                      id="photos"
-                      type="file"
-                      accept="image/*"
-                      multiple
-                      className="mt-2 block w-full text-sm file:mr-4 file:rounded-xl file:border-0 file:bg-white/10 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-foreground hover:file:bg-white/15"
-                      onChange={(e) => onPickImages(e.target.files)}
-                      data-testid="input-photos"
-                    />
-
-                    <div className="mt-3 grid grid-cols-3 gap-2" data-testid="grid-photos">
-                      {[0, 1, 2].map((i) => (
-                        <div
-                          key={i}
-                          className="relative aspect-square overflow-hidden rounded-2xl border border-white/10 bg-black/20"
-                          data-testid={`card-photo-${i}`}
-                        >
-                          {heroImages[i] ? (
-                            <img
-                              src={heroImages[i]}
-                              alt={`Uploaded photo ${i + 1}`}
-                              className="h-full w-full object-cover"
-                              loading="lazy"
-                              data-testid={`img-photo-${i}`}
-                            />
-                          ) : (
-                            <div
-                              className="flex h-full w-full items-center justify-center text-xs text-muted-foreground"
-                              data-testid={`text-photo-empty-${i}`}
-                            >
-                              Add
-                            </div>
-                          )}
+              <div className="flex h-full items-center justify-center">
+                <div className="relative h-full w-full max-w-[400px]">
+                  {/* Decorative element or secondary gallery */}
+                  <div className="absolute -inset-4 rounded-[40px] bg-gradient-to-br from-primary/20 to-secondary/20 blur-2xl opacity-50" />
+                  <div className="glass grain relative flex aspect-[4/5] flex-col overflow-hidden rounded-[32px] border-white/10">
+                    {heroImages[0] ? (
+                      <img
+                        src={heroImages[0]}
+                        alt="Profile"
+                        className="h-full w-full object-cover"
+                        data-testid="img-hero-main"
+                      />
+                    ) : (
+                      <div className="flex h-full w-full flex-col items-center justify-center p-8 text-center">
+                        <div className="mb-4 rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
+                          <Sparkles className="h-8 w-8 text-primary" />
                         </div>
-                      ))}
+                        <h3 className="text-xl font-semibold">Ready to build</h3>
+                        <p className="mt-2 text-sm text-muted-foreground">
+                          Upload your photo in the settings or keep this clean aesthetic.
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                  
+                  {/* Floating badge */}
+                  <div className="absolute -bottom-6 -right-6 glass grain rounded-2xl border-white/10 p-4 shadow-2xl">
+                    <div className="flex items-center gap-3">
+                      <div className="h-10 w-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                        <Sparkles className="h-5 w-5 text-primary" />
+                      </div>
+                      <div>
+                        <div className="text-xs font-bold uppercase tracking-wider text-primary">Status</div>
+                        <div className="text-sm font-medium">Available for hire</div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-
-                <div className="mt-4 rounded-2xl border border-white/10 bg-white/5 p-3">
-                  <div className="text-xs font-medium text-muted-foreground" data-testid="text-profile-preview">
-                    Preview data (from your resume + LinkedIn snapshot)
-                  </div>
-                  <div className="mt-2 text-sm font-semibold" data-testid="text-preview-name">
-                    {profile.name}
-                  </div>
-                  <div className="mt-1 text-xs text-muted-foreground" data-testid="text-preview-headline">
-                    {profile.headline}
                   </div>
                 </div>
               </div>

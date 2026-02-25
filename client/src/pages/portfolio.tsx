@@ -50,74 +50,50 @@ type ExtractedProfile = {
 };
 
 const seededProfile: ExtractedProfile = {
-  name: "M Anirudh",
+  name: "Anirudh Mamilla",
   headline:
-    "Google Cloud Arcade Facilitator • Google Student Ambassador • Web Dev • AI/ML • Cloud",
-  location: "Tirupati Urban, Andhra Pradesh, India",
+    "Google Student Ambassador • Google Cloud Arcade Facilitator • CS Student • AI/ML & Cloud Enthusiast",
+  location: "Tirupati, Andhra Pradesh, India",
   email: "anirudh.mamilla1@gmail.com",
-  phone: "+91 950255 0770",
+  phone: "+91 9502550770",
   links: [
     { label: "LinkedIn", url: "https://www.linkedin.com/in/m-anirudh-898a68257" },
-    { label: "GitHub", url: "https://github.com/" },
+    { label: "GitHub", url: "https://github.com/anirudh-mamilla" },
   ],
   summary:
-    "Hi, I’m Anirudh — a Computer Science student passionate about Web Development, AI, and Cloud Computing. I enjoy building real-world projects and exploring new technologies. I’m currently a Google Cloud Arcade Facilitator, helping others learn cloud skills through fun, interactive activities. I’m always eager to learn, grow, and connect with people in tech.",
+    "Self-driven Computer Science undergraduate with a strong foundation in problem-solving and a deep curiosity for how systems work. I take ownership of my work, adapt quickly, and contribute reliably in team environments. Motivated by clarity, continuous learning, and delivering meaningful impact through every project I take on.",
   experience: [
     {
       title: "Web Developer Intern",
       company: "APSCHE (Remote)",
-      date: "May 2025 – Jul 2025",
+      date: "May 2025 – July 2025",
       bullets: [
-        "Built responsive web pages with HTML, CSS, JavaScript, Bootstrap (↑ responsiveness 30%).",
-        "Enhanced and integrated REST APIs + interactive features (↑ engagement 25%).",
-        "Optimized frontend–backend communication (↓ API response time 20%).",
+        "Built responsive web pages with HTML, CSS, JavaScript, Bootstrap, improving responsiveness by 30%.",
+        "Enhanced and Integrated REST APIs and interactive features, boosting user engagement by 25%.",
+        "Optimized frontend–backend communication, reducing API response time by 20%.",
       ],
     },
     {
       title: "ML Engineer Intern",
       company: "Edunet Foundation (Remote)",
-      date: "Apr 2025 – May 2025",
+      date: "April 2025 – May 2025",
       bullets: [
-        "Completed Microsoft-initiated internship on AI foundations and machine learning.",
-        "Built AI Skin Disease Analyzer using TensorFlow + Scikit-learn (88% accuracy).",
-        "Created end-to-end ML pipeline and deployed with Streamlit.",
-      ],
-    },
-    {
-      title: "Frontend Developer",
-      company: "YHills (Remote)",
-      date: "Feb 2025 – Present",
-      bullets: [
-        "Create and polish the visual parts of web apps using HTML, CSS and JavaScript.",
-      ],
-    },
-    {
-      title: "Full-stack Developer Intern",
-      company: "TheSmartBridge",
-      date: "May 2025 – Jul 2025",
-      bullets: [
-        "Built dynamic, responsive, scalable MERN applications while strengthening full‑stack fundamentals.",
-      ],
-    },
-    {
-      title: "Volunteer",
-      company: "Liquid Trees",
-      date: "Nov 2023 – Mar 2024",
-      bullets: [
-        "Volunteered for climate innovation — supporting native diatom growth initiatives.",
+        "Completed a Microsoft-initiated internship focused on AI Foundations and Machine Learning.",
+        "Built an AI-based Skin Disease Analyzer in Python using TensorFlow and Scikit-learn with 88% accuracy.",
+        "Built an end-to-end ML pipeline for training, optimization, evaluation, and deployment using Streamlit.",
       ],
     },
   ],
   education: [
     {
       school: "SV College of Engineering",
-      degree: "BTech — Computer Science / AI & ML",
+      degree: "BTech in Computer Science",
       date: "2023 – 2026",
-      meta: "GPA: 8.93",
+      meta: "GPA: 9.06",
     },
     {
       school: "Sree Vidyanikethan Engineering College",
-      degree: "Diploma — Computer Science",
+      degree: "Diploma in Computer Science",
       date: "2020 – 2023",
       meta: "83.66%",
     },
@@ -132,14 +108,14 @@ const seededProfile: ExtractedProfile = {
     "Salesforce: Certified AI Associate (2024)",
     "ServiceNow: Certified System Administrator (2025)",
     "ServiceNow: Certified Application Developer (2025)",
-    "Oracle: Certified Generative AI Professional (2025)",
-    "Microsoft Learn: 100+ badges",
+    "AWS: Certified AI Practitioner (2026)",
+    "AWS: Certified Cloud Practitioner (2026)",
   ],
   skills: [
     "Java",
     "Python",
     "JavaScript",
-    "React",
+    "React.js",
     "TensorFlow",
     "Scikit-learn",
     "Streamlit",
@@ -147,26 +123,24 @@ const seededProfile: ExtractedProfile = {
     "MySQL",
     "Docker",
     "GCP",
-    "Salesforce",
-    "ServiceNow",
   ],
   projects: [
     {
       name: "Learn Hub",
-      desc: "Full-stack learning platform with a user‑centric resource interface.",
-      tools: ["React", "MongoDB", "HTML", "CSS"],
+      desc: "Engineered a full-stack learning platform using React.js and MongoDB with custom middleware to deliver a highly intuitive and user-centric resource interface.",
+      tools: ["MongoDB", "React.js", "CSS", "HTML"],
       linkLabel: "Learn-Hub",
     },
     {
-      name: "AI Skin Disease Analyzer",
-      desc: "Classifier + Streamlit app for model predictions and usability.",
+      name: "AI based Skin Disease Analyzer",
+      desc: "Built an AI application interface with Streamlit to display model predictions and improve usability, integrating the classification model developed using Python and TensorFlow/Keras.",
       tools: ["Python", "TensorFlow/Keras", "Scikit-learn", "Pandas", "Streamlit"],
       linkLabel: "skin-disease-analyzer",
     },
     {
       name: "Cold Mail AI Agent",
-      desc: "Containerized automation agent integrating email workflows with n8n and Docker.",
-      tools: ["n8n", "Docker", "Google APIs"],
+      desc: "Designed and containerized an automated cold mail agent using Docker and n8n to integrate Google/Email APIs, successfully streamlining outreach workflows and increasing efficiency by 75%.",
+      tools: ["n8n", "Google APIs", "Email APIs", "Google Sheets API", "Docker"],
     },
   ],
 };

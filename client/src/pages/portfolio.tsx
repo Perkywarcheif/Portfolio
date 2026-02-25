@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import profilePhoto from "@assets/WhatsApp_Image_2026-02-25_at_7.39.56_PM_1772028613452.jpeg";
 import {
   ArrowRight,
   Download,
@@ -563,24 +564,12 @@ export default function Portfolio() {
                   {/* Decorative element or secondary gallery */}
                   <div className="absolute -inset-4 rounded-[40px] bg-gradient-to-br from-primary/20 to-secondary/20 blur-2xl opacity-50" />
                   <div className="glass grain relative flex aspect-[4/5] flex-col overflow-hidden rounded-[32px] border-white/10">
-                    {heroImages[0] ? (
-                      <img
-                        src={heroImages[0]}
-                        alt="Profile"
-                        className="h-full w-full object-cover"
-                        data-testid="img-hero-main"
-                      />
-                    ) : (
-                      <div className="flex h-full w-full flex-col items-center justify-center p-8 text-center">
-                        <div className="mb-4 rounded-2xl bg-white/5 p-4 ring-1 ring-white/10">
-                          <Sparkles className="h-8 w-8 text-primary" />
-                        </div>
-                        <h3 className="text-xl font-semibold">Ready to build</h3>
-                        <p className="mt-2 text-sm text-muted-foreground">
-                          Upload your photo in the settings or keep this clean aesthetic.
-                        </p>
-                      </div>
-                    )}
+                    <img
+                      src={profilePhoto}
+                      alt="Anirudh Mamilla"
+                      className="h-full w-full object-cover"
+                      data-testid="img-hero-main"
+                    />
                   </div>
                   
                   {/* Floating badge */}
